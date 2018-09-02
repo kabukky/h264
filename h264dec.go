@@ -14,7 +14,7 @@ import (
 		} h264dec_t ;
 
 		static int h264dec_new(h264dec_t *h, uint8_t *data, int len) {
-			h->c = avcodec_find_decoder(CODEC_ID_H264);
+			h->c = avcodec_find_decoder(AV_CODEC_ID_H264);
 			h->ctx = avcodec_alloc_context3(h->c);
 			h->f = av_frame_alloc();
 			h->ctx->extradata = data;
